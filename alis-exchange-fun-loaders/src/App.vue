@@ -1,10 +1,10 @@
 <!-- src/App.vue -->
 <template>
   <div>
-    <AlisLogoReconstruction />
+    <SnakeGame />
   </div>
 </template>
 
 <script setup lang="ts">
-import { AlisLogoReconstruction } from './index'; // Import from your library's entry point
+import { SnakeGame } from './index'; // Import from your library's entry point
 </script>
