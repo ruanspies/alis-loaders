@@ -1,7 +1,10 @@
 {
   "name": "@hi_ruan/alis-exchange-fun-loaders",
-  "private": false,
   "version": "0.0.1",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "./dist/alis-exchange-fun-loaders.umd.cjs",
   "module": "./dist/alis-exchange-fun-loaders.js",

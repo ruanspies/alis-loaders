@@ -37,5 +37,5 @@ jobs:
 
       - name: Publish
         working-directory: ./alis-exchange-fun-loaders
-        run: pnpm publish --no-git-checks
+        run: pnpm publish --no-git-checks --access public
         # The env block is no longer needed here
