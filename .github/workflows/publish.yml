@@ -21,10 +21,13 @@ jobs:
           node-version: 18
           cache: 'pnpm'
       - name: Install dependencies
+        working-directory: ./alis-exchange-fun-loaders
         run: pnpm install --no-frozen-lockfile
       - name: Build
+        working-directory: ./alis-exchange-fun-loaders
         run: pnpm build
       - name: Publish
+        working-directory: ./alis-exchange-fun-loaders
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
