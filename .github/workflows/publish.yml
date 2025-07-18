@@ -8,27 +8,34 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Move the environment variable to the job level
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          registry-url: 'https://registry.npmjs.org/' # <-- Configure the registry
           cache: 'pnpm'
           cache-dependency-path: alis-exchange-fun-loaders/pnpm-lock.yaml
       - name: Install dependencies
         working-directory: ./alis-exchange-fun-loaders
         run: pnpm install --no-frozen-lockfile
+
       - name: Build
         working-directory: ./alis-exchange-fun-loaders
         run: pnpm build
+
       - name: Publish
         working-directory: ./alis-exchange-fun-loaders
         run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # The env block is no longer needed here
