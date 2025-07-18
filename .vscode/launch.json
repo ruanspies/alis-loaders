@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "npm:dev ./alis-exchange-fun-loaders",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "preLaunchTask": "npm:dev ./alis-exchange-fun-loaders"
+    }
+  ]
+}

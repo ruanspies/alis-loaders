@@ -1,0 +1,43 @@
+{
+  "name": "@hi_ruan/alis-exchange-fun-loaders",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/alis-exchange-fun-loaders.umd.cjs",
+  "module": "./dist/alis-exchange-fun-loaders.js",
+  "types": "./dist/alis-exchange-fun-loaders.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/alis-exchange-fun-loaders.js",
+      "require": "./dist/alis-exchange-fun-loaders.umd.cjs",
+      "types": "./dist/alis-exchange-fun-loaders.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruanspies/alis-loaders.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vue-tsc": "^2.0.6",
+    "path": "^0.12.7"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
+  }
+}

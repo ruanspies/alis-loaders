@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm:dev ./alis-exchange-fun-loaders",
+      "type": "npm",
+      "script": "dev",
+      "path": "./alis-exchange-fun-loaders",
+      "problemMatcher": [],
+      "detail": "vite",
+      "options": {
+        "cwd": "${workspaceFolder}/alis-exchange-fun-loaders"
+      }
+    }
+  ]
+}
